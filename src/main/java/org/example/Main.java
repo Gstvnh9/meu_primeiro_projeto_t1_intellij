@@ -10,13 +10,28 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Informe o lado do seu quadrado em centímetros: ");
+         // Criar variáveis
 
-         double lado = entrada.nextDouble();
+         double base, altura, perimetro;
 
-         double area = lado * lado;
+         // Entrada de dados
 
-         System.out.println("A área do quadrado é de " + area + " centimetros quadrados");
+         System.out.println("Informe a base do retângulo: ");
 
+         base = entrada.nextDouble();
+
+
+
+         System.out.print("Informe a altura do retângulo: ");
+
+         altura = entrada.nextDouble();
+
+         // Cálculo
+
+         perimetro = 2 * base + 2 * altura;
+
+         // Resultado
+
+         System.out.println("O retângulo tem " + perimetro + " cm de perímetro");
      }
 }
