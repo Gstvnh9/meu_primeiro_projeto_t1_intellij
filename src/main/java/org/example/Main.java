@@ -12,13 +12,13 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Qual produto você deseja comprar?");
-         String produto = entrada.nextLine();
+         System.out.println("Qual valor, em reais, você possui no momento?");
+         double dinheiro = entrada.nextDouble();
 
-         System.out.println("Qual o preço do seu produto?");
-         double preco = entrada.nextDouble();
+         System.out.println("Agora me diga qual a cotação do dolar, em reais, atualmente:");
+         double cotacao = entrada.nextDouble();
 
-         System.out.println("Parabéns, você recebeu um desconto de 15%!");
-         System.out.println("O valor do " + produto + " decaiu para R$ " + preco * 0.85);
+         System.out.println("Você possui R$ " + dinheiro);
+         System.out.println("Você possui U$ " + dinheiro / cotacao);
      }
 }
