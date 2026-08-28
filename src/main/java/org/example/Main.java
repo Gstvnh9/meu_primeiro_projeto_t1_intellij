@@ -3,15 +3,21 @@ package org.example;
 public class Main {
      static void main() {
 
-         double valorDouble = 25.7;
+         float varF = 2.7f;
 
-         int valorInt = (int) valorDouble;
+         long varL = (long) varF;
 
-         //              > Casting Explícito
+         //              ^ casting explícito
+
+         double varD = varL; // casting implícito
 
 
 
-         System.out.println("Valor do Integrao: " + valorInt);
+         System.out.println("Valor do float: " + varF);
 
-    }
+         System.out.println("Valor do long: " + varL);
+
+         System.out.println("Valor do double: " + varD);
+
+     }
 }
