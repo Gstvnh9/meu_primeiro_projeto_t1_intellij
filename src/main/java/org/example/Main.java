@@ -3,29 +3,33 @@ package org.example;
 public class Main {
      static void main() {
 
-         int a, b;
+         int nota = 100;
 
-         a = 10;
+         int frequencia = 60;
 
-         b = 5;
+         boolean A = nota >= 50;
 
-
-
-         boolean maior = a > b;
+         boolean B = frequencia >= 75;
 
 
 
-         System.out.println("A maior que B? R: " + maior);
+         boolean cond1, cond2, cond3;
 
-         System.out.println("A menor que B? R: " + (a < b));
 
-         System.out.println("A igual a B? R: " + (a == b));
 
-         System.out.println("A diferente de B? R: " + (a != b));
+         cond1 = nota >= 50 && frequencia >= 75;
 
-         System.out.println("A maior ou igual a B? R: " + (a >= b));
+         cond2 = A || B;
 
-         System.out.println("A menor ou igual a B? R: " + (a <= b));
+         cond3 = !A;
+
+
+
+         System.out.println("O aluno sera aprovado? " + cond1);
+
+         System.out.println("A OU B: " + cond2);
+
+         System.out.println("Inverso de A: " + cond3);
 
      }
 }
