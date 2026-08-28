@@ -7,31 +7,18 @@ import java.util.Scanner;
 public class Main {
      static void main() {
 
+         // Precisa de um acesso do Interpasse
+
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         // Criar variáveis
+         System.out.println("Qual produto você deseja comprar?");
+         String produto = entrada.nextLine();
 
-         double base, altura, perimetro;
+         System.out.println("Qual o preço do seu produto?");
+         double preco = entrada.nextDouble();
 
-         // Entrada de dados
-
-         System.out.println("Informe a base do retângulo: ");
-
-         base = entrada.nextDouble();
-
-
-
-         System.out.print("Informe a altura do retângulo: ");
-
-         altura = entrada.nextDouble();
-
-         // Cálculo
-
-         perimetro = 2 * base + 2 * altura;
-
-         // Resultado
-
-         System.out.println("O retângulo tem " + perimetro + " cm de perímetro");
+         System.out.println("Parabéns, você recebeu um desconto de 15%!");
+         System.out.println("O valor do " + produto + " decaiu para R$ " + preco * 0.85);
      }
 }
