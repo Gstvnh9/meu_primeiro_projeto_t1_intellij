@@ -8,24 +8,15 @@ public class Main {
      static void main() {
 
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
-
-
-
          Scanner entrada = new Scanner(System.in);
 
+         System.out.println("Informe o lado do seu quadrado em centímetros: ");
 
+         double lado = entrada.nextDouble();
 
-         double Celsius;
+         double area = lado * lado;
 
-         System.out.println("Informe a temperatura em graus celsius: ");
-
-         Celsius = entrada.nextDouble();
-
-         double Fahrenheit = (Celsius * 9/5) + 32;
-
-
-
-         System.out.println("A temperatura em Celsius se encontra em: " + Fahrenheit + " Fahrenheit");
+         System.out.println("A área do quadrado é de " + area + " centimetros quadrados");
 
      }
 }
