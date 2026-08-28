@@ -3,33 +3,27 @@ package org.example;
 public class Main {
      static void main() {
 
-         int nota = 100;
+         double p1, p2, p3;
 
-         int frequencia = 60;
+         p1 = 75;
 
-         boolean A = nota >= 50;
+         p2 = 10.7;
 
-         boolean B = frequencia >= 75;
-
-
-
-         boolean cond1, cond2, cond3;
+         p3 = 100;
 
 
 
-         cond1 = nota >= 50 && frequencia >= 75;
+         double media = (p1 + p2 + p3)/3;
 
-         cond2 = A || B;
+         System.out.println("Suas notas foram:");
 
-         cond3 = !A;
+         System.out.println("Prova 1: " + p1);
 
+         System.out.println("Prova 2: " + p2);
 
+         System.out.println("Prova 3: " + p3);
 
-         System.out.println("O aluno sera aprovado? " + cond1);
-
-         System.out.println("A OU B: " + cond2);
-
-         System.out.println("Inverso de A: " + cond3);
+         System.out.println("A media desse semestre foi de: " + media);
 
      }
 }
