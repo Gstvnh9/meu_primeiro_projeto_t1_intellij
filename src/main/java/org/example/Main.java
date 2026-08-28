@@ -1,29 +1,31 @@
 package org.example;
 
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 public class Main {
      static void main() {
 
-         double p1, p2, p3;
-
-         p1 = 75;
-
-         p2 = 10.7;
-
-         p3 = 100;
+         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
 
 
-         double media = (p1 + p2 + p3)/3;
+         Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Suas notas foram:");
 
-         System.out.println("Prova 1: " + p1);
 
-         System.out.println("Prova 2: " + p2);
+         double Celsius;
 
-         System.out.println("Prova 3: " + p3);
+         System.out.println("Informe a temperatura em graus celsius: ");
 
-         System.out.println("A media desse semestre foi de: " + media);
+         Celsius = entrada.nextDouble();
+
+         double Fahrenheit = (Celsius * 9/5) + 32;
+
+
+
+         System.out.println("A temperatura em Celsius se encontra em: " + Fahrenheit + " Fahrenheit");
 
      }
 }
