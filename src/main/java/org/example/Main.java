@@ -3,11 +3,15 @@ package org.example;
 public class Main {
      static void main() {
 
-        int valorInt = 12;
+         double valorDouble = 25.7;
 
-        double valorDouble = valorInt; // casting implícito
+         int valorInt = (int) valorDouble;
 
-        System.out.println("Valor do Dogras: " + valorDouble);
+         //              > Casting Explícito
+
+
+
+         System.out.println("Valor do Integrao: " + valorInt);
 
     }
 }
