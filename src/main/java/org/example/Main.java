@@ -1,14 +1,13 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+     static void main() {
 
-        short numeroPequeno = 1;
-        int numeroInteiro = numeroPequeno;
-        byte numeroPequenino = (byte) numeroPequeno;
+        int valorInt = 12;
 
-        System.out.println("O número final é: " + numeroPequenino);
+        double valorDouble = valorInt; // casting implícito
+
+        System.out.println("Valor do Dogras: " + valorDouble);
+
     }
 }
