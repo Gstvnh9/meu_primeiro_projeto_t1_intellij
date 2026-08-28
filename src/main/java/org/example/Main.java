@@ -3,21 +3,13 @@ package org.example;
 public class Main {
      static void main() {
 
-         float varF = 2.7f;
+        short numeroPequeno = 1;
+        int numeroMedio = numeroPequeno;
+        byte numeroPequenino = (byte) numeroPequeno;
 
-         long varL = (long) varF;
+        System.out.println("Número Pequeno: " + numeroPequeno);
+        System.out.println("Número Médio: " + numeroMedio);
+        System.out.println("Número Pequenino: " + numeroPequenino);
 
-         //              ^ casting explícito
-
-         double varD = varL; // casting implícito
-
-
-
-         System.out.println("Valor do float: " + varF);
-
-         System.out.println("Valor do long: " + varL);
-
-         System.out.println("Valor do double: " + varD);
-
-     }
+    }
 }
