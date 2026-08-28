@@ -12,13 +12,14 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Qual valor, em reais, você possui no momento?");
-         double dinheiro = entrada.nextDouble();
+         System.out.println("Qual a distância média, em quilômetros, que você geralmente percorre em uma viagem de carro?");
+         double distancia = entrada.nextDouble();
 
-         System.out.println("Agora me diga qual a cotação do dolar, em reais, atualmente:");
-         double cotacao = entrada.nextDouble();
+         System.out.println("Nessa distância percorrida, qual a quantidade de combústivel, em litros, gasto?");
+         double combustivel = entrada.nextDouble();
 
-         System.out.println("Você possui R$ " + dinheiro);
-         System.out.println("Você possui U$ " + dinheiro / cotacao);
+         double consumoMedio = distancia / combustivel;
+
+         System.out.println("Nas suas viagens, você viaja " + consumoMedio + " quilômetros para cada litro de combustível." );
      }
 }
