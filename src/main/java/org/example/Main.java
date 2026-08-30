@@ -12,15 +12,17 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Indique um valor, em metros:");
-         double metros = entrada.nextDouble();
+         System.out.println("Indique o primeiro valor, inteiro:");
+         int valor1 = entrada.nextInt();
 
-         double centimetros = metros * 100;
-         double milimetros = metros * 1000;
+         System.out.println("Agora, indique o segundo valor, também inteiro:");
+         int valor2 = entrada.nextInt();
 
-         System.out.println("Valor em metros: " + metros);
-         System.out.println("Valor em centímetros: " + centimetros);
-         System.out.println("Valor em milímetros: " + milimetros);
+         int quociente = valor1 / valor2;
+         int resto = valor1 % valor2;
+
+         System.out.println("Quociente da divisão: " + quociente);
+         System.out.println("Resto da divisão: " + resto);
 
      }
 }
