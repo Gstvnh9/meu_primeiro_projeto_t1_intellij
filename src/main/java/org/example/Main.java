@@ -12,14 +12,14 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Qual a distância média, em quilômetros, que você geralmente percorre em uma viagem de carro?");
-         double distancia = entrada.nextDouble();
+         System.out.println("Indique o valor para cada hora que você trabalha:");
+         double valor = entrada.nextDouble();
 
-         System.out.println("Nessa distância percorrida, qual a quantidade de combústivel, em litros, gasto?");
-         double combustivel = entrada.nextDouble();
+         System.out.println("Agora, indique o número de horas que você trabalha no mês:");
+         int horas = entrada.nextInt();
 
-         double consumoMedio = distancia / combustivel;
+         double salario = valor * horas;
 
-         System.out.println("Nas suas viagens, você viaja " + consumoMedio + " quilômetros para cada litro de combustível." );
+         System.out.println("O seu salário bruto está avaliado em, aproximadamente, R$ " + salario + " por mês.");
      }
 }
