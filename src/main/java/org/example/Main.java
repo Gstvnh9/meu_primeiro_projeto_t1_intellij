@@ -12,11 +12,20 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Indique o raio do círculo, em centímetros:");
-         double raio = entrada.nextDouble();
+         System.out.println("Indique o valor A:");
+         int valorA = entrada.nextInt();
 
-         double area = Math.PI * Math.pow(raio, 2);
+         System.out.println("Agora, indique o valor B:");
+         int valorB = entrada.nextInt();
 
-         System.out.println("A área do seu círculo é de, aproximadamente " + area + " centímetros quadrados.");
+         int novoValorA = valorB;
+         int novoValorB = valorA;
+
+         System.out.println("Valor inicial de A: " + valorA);
+         System.out.println("Valor inicial de B: " + valorB);
+         System.out.println("=============================");
+         System.out.println("Valor de A, após a troca: " + novoValorA);
+         System.out.println("Valor de B, após a troca: " + novoValorB);
+
      }
 }
