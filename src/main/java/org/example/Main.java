@@ -12,15 +12,15 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Indique o seu peso:");
-         double peso = entrada.nextDouble();
+         System.out.println("Indique um valor, em metros:");
+         double metros = entrada.nextDouble();
 
-         System.out.println("Agora, indique a sua altura:");
-         double altura = entrada.nextDouble();
+         double centimetros = metros * 100;
+         double milimetros = metros * 1000;
 
-         double indice = peso / Math.pow(altura, 2);
-
-         System.out.println("O seu Índice de Massa Corporal é de, aproximadamente, " + indice);
+         System.out.println("Valor em metros: " + metros);
+         System.out.println("Valor em centímetros: " + centimetros);
+         System.out.println("Valor em milímetros: " + milimetros);
 
      }
 }
