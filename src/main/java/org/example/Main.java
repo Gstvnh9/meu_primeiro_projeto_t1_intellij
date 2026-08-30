@@ -12,14 +12,11 @@ public class Main {
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
 
-         System.out.println("Indique o valor para cada hora que você trabalha:");
-         double valor = entrada.nextDouble();
+         System.out.println("Indique o raio do círculo, em centímetros:");
+         double raio = entrada.nextDouble();
 
-         System.out.println("Agora, indique o número de horas que você trabalha no mês:");
-         int horas = entrada.nextInt();
+         double area = Math.PI * Math.pow(raio, 2);
 
-         double salario = valor * horas;
-
-         System.out.println("O seu salário bruto está avaliado em, aproximadamente, R$ " + salario + " por mês.");
+         System.out.println("A área do seu círculo é de, aproximadamente " + area + " centímetros quadrados.");
      }
 }
