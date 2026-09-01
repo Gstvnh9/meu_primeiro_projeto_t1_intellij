@@ -12,18 +12,40 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique a sua nota de 0 a 10, para classificação de desempenho:");
-         double nota = entrada.nextDouble();
+         System.out.println("Indique um número de 1 a 7:");
+         int dia = entrada.nextInt();
 
-         if (nota >= 9) {
-             System.out.println("Você obteve um desempenho Excelente!");
-         } else if (nota >= 7) {
-             System.out.println("Você obteve um desempenho Bom!");
-         } else if (nota >= 5) {
-             System.out.println("Você obteve um desemprenho Regular!");
-         } else {
-             System.out.println("Você obteve um desempenho Insuficiente!");
+         switch (dia) {
+             case 1:
+                 System.out.println("O número 1 representa o Domingo!");
+                 break;
+
+             case 2:
+                 System.out.println("O número 2 representa a Segunda-Feira!");
+                 break;
+
+             case 3:
+                 System.out.println("O número 3 representa a Terça-Feira!");
+                 break;
+
+             case 4:
+                 System.out.println("O número 4 representa a Quarta-Feira!");
+                 break;
+
+             case 5:
+                 System.out.println("O número 5 representa a Quinta-Feira!");
+                 break;
+
+             case 6:
+                 System.out.println("O número 6 representa a Sexta-Feira!");
+                 break;
+
+             case 7:
+                 System.out.println("O número 7 representa o Sábado!");
+                 break;
+
+             default:
+                 System.out.println("Apenas indique números de 1 a 7!");
          }
-
      }
 }
