@@ -3,6 +3,7 @@ package org.example;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.Locale;
 
 public class Main {
      static void main() {
@@ -11,20 +12,14 @@ public class Main {
 
          System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
          Scanner entrada = new Scanner(System.in);
+         entrada.useLocale(Locale.US);
 
-         System.out.println("Indique o valor do seu capital inicial:");
-         double capital = entrada.nextDouble();
+         System.out.println("Indique uma quantidade, em segundos:");
+         int segundos = entrada.nextInt();
 
-         System.out.println("Agora, indique o valor da taxa de juros mensal, em porcentagem:");
-         double juros = entrada.nextDouble();
+         int minutos = segundos / 60;
+         int horas = minutos / 60;
 
-         System.out.println("Por último, indique o tempo, em meses:");
-         int tempo = entrada.nextInt();
-
-         juros = juros / 100;
-         double jurosSimples = capital * juros * tempo;
-         double montante = jurosSimples + capital;
-
-         System.out.println("O seu montante final está avaliado em, aproximadamente, R$ " + montante + ".");
+         System.out.println(segundos + " segundos representam: " + horas + " horas, " + minutos + " minutos e " + segundos + " segundos." );
      }
 }
