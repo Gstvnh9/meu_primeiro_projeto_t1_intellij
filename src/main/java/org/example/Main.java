@@ -12,16 +12,18 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Informe o primeiro valor inteiro:");
-         int valor1 = entrada.nextInt();
+         System.out.println("Indique a sua nota de 0 a 10, para classificação de desempenho:");
+         double nota = entrada.nextDouble();
 
-         System.out.println("Agora, estipule o segundo valor:");
-         int valor2 = entrada.nextInt();
-
-         if (valor1 > valor2) {
-             System.out.println("O maior valor é: " + valor1);
+         if (nota >= 9) {
+             System.out.println("Você obteve um desempenho Excelente!");
+         } else if (nota >= 7) {
+             System.out.println("Você obteve um desempenho Bom!");
+         } else if (nota >= 5) {
+             System.out.println("Você obteve um desemprenho Regular!");
          } else {
-             System.out.println("O maior valor é: " + valor2);
+             System.out.println("Você obteve um desempenho Insuficiente!");
          }
+
      }
 }
