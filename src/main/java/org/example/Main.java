@@ -16,9 +16,9 @@ public class Main {
          int idade = entrada.nextInt();
 
          if (idade >= 18) {
-             System.out.println("Maior de idade");
+             System.out.println("Maior de idade!");
          } else {
-             System.out.println("Menor de idade");
+             System.out.println("Menor de idade!");
          }
      }
 }
