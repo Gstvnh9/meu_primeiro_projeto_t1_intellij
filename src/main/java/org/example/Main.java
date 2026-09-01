@@ -12,13 +12,16 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique a sua nota final, para determinar a aprovação:");
-         double nota = entrada.nextDouble();
+         System.out.println("Informe o primeiro valor inteiro:");
+         int valor1 = entrada.nextInt();
 
-         if (nota >= 7) {
-             System.out.println("Parabéns, você foi aprovado!");
+         System.out.println("Agora, estipule o segundo valor:");
+         int valor2 = entrada.nextInt();
+
+         if (valor1 > valor2) {
+             System.out.println("O maior valor é: " + valor1);
          } else {
-             System.out.println("Infelizmente você foi reprovado. Se esforce mais daqui para frente!");
+             System.out.println("O maior valor é: " + valor2);
          }
      }
 }
