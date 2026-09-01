@@ -12,13 +12,13 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique a sua idade:");
-         int idade = entrada.nextInt();
+         System.out.println("Indique a sua nota final, para determinar a aprovação:");
+         double nota = entrada.nextDouble();
 
-         if (idade >= 18) {
-             System.out.println("Maior de idade!");
+         if (nota >= 7) {
+             System.out.println("Parabéns, você foi aprovado!");
          } else {
-             System.out.println("Menor de idade!");
+             System.out.println("Infelizmente você foi reprovado. Se esforce mais daqui para frente!");
          }
      }
 }
