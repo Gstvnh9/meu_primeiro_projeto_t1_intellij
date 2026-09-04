@@ -12,13 +12,15 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique o seu tempo na empresa, em meses:");
-         int meses = entrada.nextInt();
+         System.out.println("Você utiliza veículo próprio para trabalhar?");
+         System.out.println("Responda com 'SIM' ou 'NÃO':");
+         String resposta = entrada.nextLine();
 
-         if (meses > 3) {
-             System.out.println("Parabéns! Você possui direito de adesão ao benefício!");
+         if(resposta.equalsIgnoreCase("SIM")){
+             System.out.println("Você pode solicitar auxilio combustível!");
          } else {
-             System.out.println("Infelizmente você ainda não está há tempo suficiente na empresa para aderir ao benefício!");
+             System.out.println("Você não possui direito ao benefício!");
          }
+
      }
 }
