@@ -12,18 +12,19 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Informe o valor do seu salário:");
-         double salario = entrada.nextDouble();
+         System.out.println("Indique o valor investido pelo cliente:");
+         double investimento = entrada.nextDouble();
 
-         System.out.println("Informe o valor desejado para empréstimo:");
-         double emprestimo = entrada.nextDouble();
-
-         double aprovacao = salario * 0.3;
-
-         if (emprestimo <= aprovacao) {
-             System.out.println("O seu empréstimo foi aprovado!");
+         if (investimento <= 10000) {
+             System.out.println("Você foi classificado como um cliente BRONZE!");
+         } else if (investimento <= 50000) {
+             System.out.println("Você foi classificado como um cliente PRATA!");
+         } else if (investimento <= 100000) {
+             System.out.println("Você foi classificado como um cliente OURO!");
+         } else if (investimento > 100000) {
+             System.out.println("Você foi classificado como um cliente PLATINUM!");
          } else {
-             System.out.println("Infelizmente você ultrapassou os limites para aprovação!");
+             System.out.println("É impossível investir esse valor!");
          }
      }
 }
