@@ -12,13 +12,11 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique o saldo médio mensal do cliente:");
-         double saldo = entrada.nextDouble();
+         int participantes = 1;
 
-         if (saldo > 5000) {
-             System.out.println("Parabéns, você possui direito à isenção de tarifa bancária!");
-         } else {
-             System.out.println("Infelizmente, você não atendeu os requisitos para aprovação do direito de isenção de tarifa bancária.");
+         while (participantes <= 10) {
+             System.out.println("Participante número " + participantes + " entrou no evento!");
+             participantes++;
          }
      }
 }
