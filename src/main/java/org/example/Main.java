@@ -12,15 +12,13 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         System.out.println("Indique o valor da transação:");
-         double transacao = entrada.nextDouble();
+         System.out.println("Indique o saldo médio mensal do cliente:");
+         double saldo = entrada.nextDouble();
 
-         if (transacao > 10000) {
-             System.out.println("Esta transação foi análisada pela central:");
-             System.out.println("Considerações: Transação Suspeita. Recomendamos checar sua conta do banco!");
+         if (saldo > 5000) {
+             System.out.println("Parabéns, você possui direito à isenção de tarifa bancária!");
          } else {
-             System.out.println("Esta transação foi análisada pela central:");
-             System.out.println("Considerações: Transação Comum.");
+             System.out.println("Infelizmente, você não atendeu os requisitos para aprovação do direito de isenção de tarifa bancária.");
          }
      }
 }
