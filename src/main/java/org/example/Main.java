@@ -12,11 +12,11 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         int participantes = 1;
+         int peca = 1;
 
-         while (participantes <= 10) {
-             System.out.println("Participante número " + participantes + " entrou no evento!");
-             participantes++;
+         while (peca <= 20) {
+             System.out.println("Peça número " + peca + " produzida!");
+             peca++;
          }
      }
 }
