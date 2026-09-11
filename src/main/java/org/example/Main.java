@@ -12,17 +12,15 @@ public class Main {
          Scanner entrada = new Scanner(System.in);
          entrada.useLocale(Locale.US);
 
-         int venda = 1;
-         double total = 0;
+         int cliente = 0;
 
-         while (venda <= 5) {
-             System.out.println("Indique o valor da venda número " + venda + ":");
-             double valor = entrada.nextDouble();
-
-             total = total + valor;
-             venda++;
+         while (cliente <= 9) {
+             System.out.println("Indique a nota do cliente:");
+             double nota = entrada.nextDouble();
+             System.out.println("Nota " + nota + " registrada!");
+             cliente++;
          }
 
-         System.out.println("O faturamento total do dia foi de: " + total);
+         System.out.println("Foram registradas " + cliente + " avaliações!");
      }
 }
