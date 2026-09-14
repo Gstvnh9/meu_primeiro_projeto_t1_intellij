@@ -6,21 +6,26 @@ import java.util.Scanner;
 import java.util.Locale;
 
 public class Main {
-     static void main() {
+    static void main() {
 
-         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
-         Scanner entrada = new Scanner(System.in);
-         entrada.useLocale(Locale.US);
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        double total = 0;
+        String continuar;
 
-         int cliente = 0;
+        do {
 
-         while (cliente <= 9) {
-             System.out.println("Indique a nota do cliente:");
-             double nota = entrada.nextDouble();
-             System.out.println("Nota " + nota + " registrada!");
-             cliente++;
-         }
+            System.out.println("Indique o valor do produto:");
+            double valor = entrada.nextDouble();
+            total = total + valor;
 
-         System.out.println("Foram registradas " + cliente + " avaliações!");
-     }
+            System.out.println("Você quer continuar com as compras? (Responda apenas com 'SIM' ou 'NÃO'):");
+            entrada.nextLine();
+            continuar = entrada.nextLine();
+
+        } while ((continuar.equalsIgnoreCase ("SIM")));
+
+        System.out.println("O valor total da compra é de R$ " + total + ".");
+    }
 }
