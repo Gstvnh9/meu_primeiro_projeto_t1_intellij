@@ -11,21 +11,19 @@ public class Main {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        double total = 0;
-        String continuar;
 
-        do {
+        int item = 1;
+        String nome;
 
-            System.out.println("Indique o valor do produto:");
-            double valor = entrada.nextDouble();
-            total = total + valor;
+        while (item < 15) {
 
-            System.out.println("Você quer continuar com as compras? (Responda apenas com 'SIM' ou 'NÃO'):");
-            entrada.nextLine();
-            continuar = entrada.nextLine();
+            item++;
+            System.out.println("Indique o nome do produto número " + item + ":");
+            nome = entrada.nextLine();
 
-        } while ((continuar.equalsIgnoreCase ("SIM")));
+            System.out.println(nome + " conferido e registrado!");
+        }
 
-        System.out.println("O valor total da compra é de R$ " + total + ".");
+        System.out.println("Foram registrados " + item + " Produtos!");
     }
 }
