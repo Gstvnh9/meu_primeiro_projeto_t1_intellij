@@ -57,5 +57,13 @@ public class Main {
 
         }
 
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro.length; j++) {
+
+                System.out.println(tabuleiro[i][j]);
+
+            }
+        }
+
     }
 }
