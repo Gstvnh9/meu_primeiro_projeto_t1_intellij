@@ -43,5 +43,12 @@ public class Main {
         };
         System.out.println(agenda[0][0]);
 
+        for (int i = 0; i < estados.length; i++) {
+
+            System.out.println("--------");
+            System.out.println(estados[i]);
+
+        }
+
     }
 }
