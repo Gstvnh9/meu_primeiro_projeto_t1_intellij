@@ -12,21 +12,12 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int[] numeros = new int[5];
-        numeros[0] = 10;
-        System.out.println("Número Inteiro: " + numeros[0]);
-
-        double[] valores = new double[3];
-        valores[0] = 1.5;
-        System.out.println("Número Decimal: " + valores[0]);
-
-        char[] letras = new char[3];
-        letras[0] = 'A';
-        System.out.println("Letras: " + letras[0]);
-
-        String[] nomes = new String[3];
-        nomes[0] = "Ana";
-        System.out.println("Nome: " + nomes[0]);
+        int[][] matriz = new int[2][2];
+        matriz[0][0] = 1;
+        matriz[0][1] = 2;
+        matriz[1][0] = 3;
+        matriz[1][1] = 4;
+        System.out.println(matriz[1][0]);
 
     }
 }
