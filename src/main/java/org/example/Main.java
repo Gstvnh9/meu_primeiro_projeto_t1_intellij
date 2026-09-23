@@ -13,13 +13,20 @@ public class Main {
         entrada.useLocale(Locale.US);
 
         int[] numeros = new int[5];
-        numeros [0] = 10;
-        numeros [1] = 20;
-        numeros [2] = 30;
-        numeros [3] = 40;
-        numeros [4] = 50;
+        numeros[0] = 10;
+        System.out.println("Número Inteiro: " + numeros[0]);
 
-        System.out.println("Primeiro elemento: " + numeros);
+        double[] valores = new double[3];
+        valores[0] = 1.5;
+        System.out.println("Número Decimal: " + valores[0]);
+
+        char[] letras = new char[3];
+        letras[0] = 'A';
+        System.out.println("Letra: " + letras[0]);
+
+        String[] nomes = new String[3];
+        nomes[0] = "Ana";
+        System.out.println("Nome: " + nomes[0]);
 
     }
 }
