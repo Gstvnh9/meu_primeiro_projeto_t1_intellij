@@ -26,5 +26,22 @@ public class Main {
         char[] estados = {'A', 'M', 'B'};
         System.out.println(estados[2]);
 
+        int[][] tabuleiro = {
+
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+
+        };
+        System.out.println(tabuleiro[2][2]);
+
+        String[][] agenda = {
+
+                {"Carlos", "Bianca"},
+                {"João", "Bruno"}
+
+        };
+        System.out.println(agenda[0][0]);
+
     }
 }
