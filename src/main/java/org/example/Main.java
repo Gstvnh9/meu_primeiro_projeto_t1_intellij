@@ -22,7 +22,7 @@ public class Main {
 
         char[] letras = new char[3];
         letras[0] = 'A';
-        System.out.println("Letra: " + letras[0]);
+        System.out.println("Letras: " + letras[0]);
 
         String[] nomes = new String[3];
         nomes[0] = "Ana";
