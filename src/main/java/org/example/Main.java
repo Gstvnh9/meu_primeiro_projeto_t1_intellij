@@ -50,5 +50,12 @@ public class Main {
 
         }
 
+        for ( char estado : estados ) {
+
+            System.out.println("====");
+            System.out.println(estado);
+
+        }
+
     }
 }
