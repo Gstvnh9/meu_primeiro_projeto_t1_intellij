@@ -23,5 +23,8 @@ public class Main {
         temperaturas[0][0] = 5.6;
         System.out.println(temperaturas[0][0]);
 
+        char[] estados = {'A', 'M', 'B'};
+        System.out.println(estados[2]);
+
     }
 }
