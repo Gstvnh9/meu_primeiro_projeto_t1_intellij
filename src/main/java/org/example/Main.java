@@ -12,18 +12,14 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int item = 1;
-        String nome;
+        int[] numeros = new int[5];
+        numeros [0] = 10;
+        numeros [1] = 20;
+        numeros [2] = 30;
+        numeros [3] = 40;
+        numeros [4] = 50;
 
-        while (item < 15) {
+        System.out.println("Primeiro elemento: " + numeros);
 
-            item++;
-            System.out.println("Indique o nome do produto número " + item + ":");
-            nome = entrada.nextLine();
-
-            System.out.println(nome + " conferido e registrado!");
-        }
-
-        System.out.println("Foram registrados " + item + " Produtos!");
     }
 }
