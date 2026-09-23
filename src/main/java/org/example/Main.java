@@ -19,5 +19,9 @@ public class Main {
         matriz[1][1] = 4;
         System.out.println(matriz[1][0]);
 
+        double[][] temperaturas = new double[2][2];
+        temperaturas[0][0] = 5.6;
+        System.out.println(temperaturas[0][0]);
+
     }
 }
