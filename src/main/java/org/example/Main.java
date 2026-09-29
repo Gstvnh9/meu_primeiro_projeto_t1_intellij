@@ -12,58 +12,57 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int[][] matriz = new int[2][2];
-        matriz[0][0] = 1;
-        matriz[0][1] = 2;
-        matriz[1][0] = 3;
-        matriz[1][1] = 4;
-        System.out.println(matriz[1][0]);
+        double[] semana = new double[7];
 
-        double[][] temperaturas = new double[2][2];
-        temperaturas[0][0] = 5.6;
-        System.out.println(temperaturas[0][0]);
+        System.out.println("Informe o valor da produção de milho, em toneladas, da primeira semana: ");
+        semana[0] = entrada.nextDouble();
 
-        char[] estados = {'A', 'M', 'B'};
-        System.out.println(estados[2]);
+        System.out.println("Agora, informe o valor da segunda semana: ");
+        semana[1] = entrada.nextDouble();
 
-        int[][] tabuleiro = {
+        System.out.println("Aqui, informe o valor da terceira semana: ");
+        semana[2] = entrada.nextDouble();
 
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
+        System.out.println("Informe o valor da quarta semana: ");
+        semana[3] = entrada.nextDouble();
 
-        };
-        System.out.println(tabuleiro[2][2]);
+        System.out.println("Prossiga informando o valor da quinta semana: ");
+        semana[4] = entrada.nextDouble();
 
-        String[][] agenda = {
+        System.out.println("Informe o valor da sexta e penultima semana: ");
+        semana[5] = entrada.nextDouble();
 
-                {"Carlos", "Bianca"},
-                {"João", "Bruno"}
+        System.out.println("E por último, informe o valor da sétima semana: ");
+        semana[6] = entrada.nextDouble();
 
-        };
-        System.out.println(agenda[0][0]);
+        double producao = 0;
+        double mediaSemanal = 0;
+        double maiorValor = 0;
 
-        for (int i = 0; i < estados.length; i++) {
+        for (double toneladas : semana) {
 
-            System.out.println("--------");
-            System.out.println(estados[i]);
+            producao += toneladas;
 
-        }
+            if (maiorValor == 0) {
 
-        for ( char estado : estados ) {
+                maiorValor += toneladas;
 
-            System.out.println("====");
-            System.out.println(estado);
+            } else if (maiorValor < toneladas) {
 
-        }
-
-        for (int i = 0; i < tabuleiro.length; i++) {
-            for (int j = 0; j < tabuleiro.length; j++) {
-
-                System.out.println(tabuleiro[i][j]);
+                maiorValor = toneladas;
 
             }
+
         }
+
+        mediaSemanal = producao / semana.length;
+
+        System.out.println("========================================");
+        System.out.println("Produção Total: " + producao);
+        System.out.println("Média Semanal: " + mediaSemanal);
+        System.out.println("Maior Produção Registrada: " + maiorValor);
+        System.out.println("========================================");
 
     }
 }
+
