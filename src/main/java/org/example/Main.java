@@ -12,56 +12,59 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        double[] semana = new double[7];
+        int temperaturaAcimaDeTrinta = 0;
 
-        System.out.println("Informe o valor da produção de milho, em toneladas, da primeira semana: ");
-        semana[0] = entrada.nextDouble();
+        double[] temperatura = new double[10];
 
-        System.out.println("Agora, informe o valor da segunda semana: ");
-        semana[1] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no primeiro dia: ");
+        temperatura[0] = entrada.nextDouble();
 
-        System.out.println("Aqui, informe o valor da terceira semana: ");
-        semana[2] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no segundo dia: ");
+        temperatura[1] = entrada.nextDouble();
 
-        System.out.println("Informe o valor da quarta semana: ");
-        semana[3] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no terceiro dia: ");
+        temperatura[2] = entrada.nextDouble();
 
-        System.out.println("Prossiga informando o valor da quinta semana: ");
-        semana[4] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no quarto dia: ");
+        temperatura[3] = entrada.nextDouble();
 
-        System.out.println("Informe o valor da sexta e penultima semana: ");
-        semana[5] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no quinto dia: ");
+        temperatura[4] = entrada.nextDouble();
 
-        System.out.println("E por último, informe o valor da sétima semana: ");
-        semana[6] = entrada.nextDouble();
+        System.out.println("Informe a temperatura medida, na estufa, no sexto dia: ");
+        temperatura[5] = entrada.nextDouble();
 
-        double producao = 0;
-        double mediaSemanal = 0;
-        double maiorValor = 0;
+        System.out.println("Informe a temperatura medida, na estufa, no sétimo dia: ");
+        temperatura[6] = entrada.nextDouble();
 
-        for (double toneladas : semana) {
+        System.out.println("Informe a temperatura medida, na estufa, no oitavo dia: ");
+        temperatura[7] = entrada.nextDouble();
 
-            producao += toneladas;
+        System.out.println("Informe a temperatura medida, na estufa, no nono dia: ");
+        temperatura[8] = entrada.nextDouble();
 
-            if (maiorValor == 0) {
+        System.out.println("E por último, Informe a temperatura medida, na estufa, no décimo dia: ");
+        temperatura[9] = entrada.nextDouble();
 
-                maiorValor += toneladas;
+        for (double temperaturas : temperatura) {
 
-            } else if (maiorValor < toneladas) {
-
-                maiorValor = toneladas;
-
+            if (temperaturas > 30) {
+                temperaturaAcimaDeTrinta++;
             }
 
         }
 
-        mediaSemanal = producao / semana.length;
+        if (temperaturaAcimaDeTrinta > 0) {
 
-        System.out.println("========================================");
-        System.out.println("Produção Total: " + producao);
-        System.out.println("Média Semanal: " + mediaSemanal);
-        System.out.println("Maior Produção Registrada: " + maiorValor);
-        System.out.println("========================================");
+            System.out.println(temperaturaAcimaDeTrinta + " dias apresentaram temperaturas acima dos 30°C");
+            System.out.println("É importante analisar os dados para melhoria!");
+
+        } else {
+
+            System.out.println("Nenhum dia apresentou temperaturas acima dos 30°C");
+            System.out.println("É importante manter estes resultados!");
+
+        }
 
     }
 }
