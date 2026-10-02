@@ -12,112 +12,74 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        double[][] chuva = new double[7][4];
+        int[][] focos = {
 
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, no domingo: ");
-        chuva[0][0] = entrada.nextDouble();
+                {10, 20, 30, 40, 50},
+                {60, 70, 80, 90, 100},
+                {5, 10, 15, 20, 25},
+                {30, 35, 40, 45, 50},
+                {55, 60, 65, 70, 75}
 
-        System.out.println("Indique a quantidade de chuva registrada na segunda área da fazenda, no domingo: ");
-        chuva[0][1] = entrada.nextDouble();
+        };
 
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, no domingo: ");
-        chuva[0][2] = entrada.nextDouble();
+        int mediaPrimeiraRegiao = 0;
+        int mediaSegundaRegiao = 0;
+        int mediaTerceiraRegiao = 0;
+        int mediaQuartaRegiao = 0;
+        int mediaQuintaRegiao = 0;
+        int maiorFoco = 0;
+        String regiao = "";
 
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, no domingo: ");
-        chuva[0][3] = entrada.nextDouble();
+        for (int i = 0; i < focos.length; i++) {
 
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, na segunda-feira: ");
-        chuva[1][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, na segunda-feira: ");
-        chuva[1][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, na segunda-feira: ");
-        chuva[1][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, na segunda-feira: ");
-        chuva[1][3] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, na terça-feira: ");
-        chuva[2][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, na terça-feira: ");
-        chuva[2][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, na terça-feira: ");
-        chuva[2][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, na terça-feira: ");
-        chuva[2][3] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, na quarta-feira: ");
-        chuva[3][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, na quarta-feira: ");
-        chuva[3][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, na quarta-feira: ");
-        chuva[3][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, na quarta-feira: ");
-        chuva[3][3] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, na quinta-feira: ");
-        chuva[4][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, na quinta-feira: ");
-        chuva[4][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, na quinta-feira: ");
-        chuva[4][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, na quinta-feira: ");
-        chuva[4][3] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, na sexta-feira: ");
-        chuva[5][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, na sexta-feira: ");
-        chuva[5][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, na sexta-feira: ");
-        chuva[5][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, na sexta-feira: ");
-        chuva[5][3] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na primeira área da fazenda, no sábado: ");
-        chuva[6][0] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na segunda área da fazenda, no sábado: ");
-        chuva[6][1] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na terceira área da fazenda, no sábado: ");
-        chuva[6][2] = entrada.nextDouble();
-
-        System.out.println("Indique a quantidade de chuva, em litros, registrada na quarta área da fazenda, no sábado: ");
-        chuva[6][3] = entrada.nextDouble();
-
-        double chuvaPrimeiraArea = 0;
-        double chuvaSegundaArea = 0;
-        double chuvaTerceiraArea = 0;
-        double chuvaQuartaArea = 0;
-
-        for (int i = 0; i < chuva.length; i++) {
-
-            chuvaPrimeiraArea += chuva[i][0];
-            chuvaSegundaArea += chuva[i][1];
-            chuvaTerceiraArea += chuva[i][2];
-            chuvaQuartaArea += chuva[i][3];
+            mediaPrimeiraRegiao += focos[0][i];
+            mediaSegundaRegiao += focos[1][i];
+            mediaTerceiraRegiao += focos[2][i];
+            mediaQuartaRegiao += focos[3][i];
+            mediaQuintaRegiao += focos[4][i];
 
         }
 
-        System.out.println("==================== RELATÓRIO GERAL ===================");
-        System.out.println("Primeira área (Total): " + chuvaPrimeiraArea + " litros.");
-        System.out.println("Segunda área (Total): " + chuvaSegundaArea + " litros."  );
-        System.out.println("Terceira área (Total): " + chuvaTerceiraArea + " litros.");
-        System.out.println("Quarta área (Total): " + chuvaQuartaArea + " litros."    );
-        System.out.println("========================================================");
+        mediaPrimeiraRegiao /= 5;
+        maiorFoco = mediaPrimeiraRegiao;
+
+        mediaSegundaRegiao /= 5;
+
+        if (maiorFoco < mediaSegundaRegiao) {
+
+            regiao = "Segunda Região";
+            maiorFoco = mediaSegundaRegiao;
+
+        }
+
+        mediaTerceiraRegiao /= 5;
+
+        if (maiorFoco < mediaTerceiraRegiao) {
+
+            regiao = "Terceira Região";
+            maiorFoco = mediaTerceiraRegiao;
+
+        }
+
+        mediaQuartaRegiao /= 5;
+
+        if (maiorFoco < mediaQuartaRegiao) {
+
+            regiao = "Quarta Região";
+            maiorFoco = mediaQuartaRegiao;
+
+        }
+
+        mediaQuintaRegiao /= 5;
+
+        if (maiorFoco < mediaQuintaRegiao) {
+
+            regiao = "Quinta Região";
+            maiorFoco = mediaQuintaRegiao;
+
+        }
+
+        System.out.println("O maior foco de pragas foi registrado na " + regiao + ", onde chegou à uma média de " + maiorFoco + "%.");
 
     }
 }
