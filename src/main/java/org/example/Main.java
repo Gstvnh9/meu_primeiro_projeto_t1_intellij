@@ -12,45 +12,45 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        double[] hortalicas = new double[5];
+        int[] areas = new int[8];
 
-        System.out.println("Indique a produção de hortaliças do primeiro talhão: ");
-        hortalicas[0] = entrada.nextDouble();
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na primeira área da fazenda: ");
+        areas[0] = entrada.nextInt();
 
-        System.out.println("Indique a produção de hortaliças do segundo talhão: ");
-        hortalicas[1] = entrada.nextDouble();
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na segunda área da fazenda: ");
+        areas[1] = entrada.nextInt();
 
-        System.out.println("Indique a produção de hortaliças do terceiro talhão: ");
-        hortalicas[2] = entrada.nextDouble();
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na terceira área da fazenda: ");
+        areas[2] = entrada.nextInt();
 
-        System.out.println("Indique a produção de hortaliças do quarto talhão: ");
-        hortalicas[3] = entrada.nextDouble();
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na quarta área da fazenda: ");
+        areas[3] = entrada.nextInt();
 
-        System.out.println("Indique a produção de hortaliças do quinto talhão: ");
-        hortalicas[4] = entrada.nextDouble();
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na quinta área da fazenda: ");
+        areas[4] = entrada.nextInt();
 
-        double primeiroTalhao = hortalicas[0];
-        double segundoTalhao = hortalicas[1];
-        double terceiroTalhao = hortalicas[2];
-        double quartoTalhao = hortalicas[3];
-        double quintoTalhao = hortalicas[4];
-        double total = 0;
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na sexta área da fazenda: ");
+        areas[5] = entrada.nextInt();
 
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na sétima área da fazenda: ");
+        areas[6] = entrada.nextInt();
 
-        for ( double producao : hortalicas ) {
+        System.out.println("Indique a umidade do solo, em porcentagem, registrada na oitava, e última, área da fazenda: ");
+        areas[7] = entrada.nextInt();
 
-            total += producao;
+        int areasMenosQuarenta = 0;
+
+        for ( int umidade : areas ) {
+
+            if (umidade < 40) {
+
+                areasMenosQuarenta++;
+
+            }
 
         }
 
-        System.out.println("========= RELATÓRIO GERAL ========");
-        System.out.println("Primeiro Talhão: " + primeiroTalhao);
-        System.out.println("Segundo Talhão: " + segundoTalhao  );
-        System.out.println("Terceiro Talhão: " + terceiroTalhao);
-        System.out.println("Quarto Talhão: " + quartoTalhao    );
-        System.out.println("Quinto Talhão: " + quintoTalhao    );
-        System.out.println("Total: " + total                   );
-        System.out.println("==================================");
+        System.out.println("Foram registradas " + areasMenosQuarenta + " áreas com umidade inferior a 40%. ");
 
     }
 }
