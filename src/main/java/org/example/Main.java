@@ -12,74 +12,87 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int[][] focos = {
+        int[][] fertilidades = {
 
-                {10, 20, 30, 40, 50},
-                {60, 70, 80, 90, 100},
-                {5, 10, 15, 20, 25},
-                {30, 35, 40, 45, 50},
-                {55, 60, 65, 70, 75}
+                {10, 20, 30, 40, 50, 60},
+                {60, 70, 80, 90, 100, 90},
+                {5, 10, 15, 20, 25, 30},
+                {30, 35, 40, 45, 50, 55},
+                {55, 60, 65, 70, 75, 80},
+                {85, 90, 95, 100, 95, 90}
 
         };
 
-        int mediaPrimeiraRegiao = 0;
-        int mediaSegundaRegiao = 0;
-        int mediaTerceiraRegiao = 0;
-        int mediaQuartaRegiao = 0;
-        int mediaQuintaRegiao = 0;
-        int maiorFoco = 0;
-        String regiao = "";
+        int mediaPrimeiraLinha = 0;
+        int mediaSegundaLinha = 0;
+        int mediaTerceiraLinha = 0;
+        int mediaQuartaLinha = 0;
+        int mediaQuintaLinha = 0;
+        int mediaSextaLinha = 0;
+        int maiorFertilidade = 0;
+        String linha = "";
 
-        for (int i = 0; i < focos.length; i++) {
+        for (int i = 0; i < fertilidades.length; i++) {
 
-            mediaPrimeiraRegiao += focos[0][i];
-            mediaSegundaRegiao += focos[1][i];
-            mediaTerceiraRegiao += focos[2][i];
-            mediaQuartaRegiao += focos[3][i];
-            mediaQuintaRegiao += focos[4][i];
-
-        }
-
-        mediaPrimeiraRegiao /= 5;
-        maiorFoco = mediaPrimeiraRegiao;
-
-        mediaSegundaRegiao /= 5;
-
-        if (maiorFoco < mediaSegundaRegiao) {
-
-            regiao = "Segunda Região";
-            maiorFoco = mediaSegundaRegiao;
+            mediaPrimeiraLinha += fertilidades[0][i];
+            mediaSegundaLinha += fertilidades[1][i];
+            mediaTerceiraLinha += fertilidades[2][i];
+            mediaQuartaLinha += fertilidades[3][i];
+            mediaQuintaLinha += fertilidades[4][i];
+            mediaSextaLinha += fertilidades[5][i];
 
         }
 
-        mediaTerceiraRegiao /= 5;
+        mediaPrimeiraLinha /= 6;
+        maiorFertilidade = mediaPrimeiraLinha;
+        linha = "Primeira Linha";
 
-        if (maiorFoco < mediaTerceiraRegiao) {
+        mediaSegundaLinha /= 6;
 
-            regiao = "Terceira Região";
-            maiorFoco = mediaTerceiraRegiao;
+        if (maiorFertilidade < mediaSegundaLinha) {
 
-        }
-
-        mediaQuartaRegiao /= 5;
-
-        if (maiorFoco < mediaQuartaRegiao) {
-
-            regiao = "Quarta Região";
-            maiorFoco = mediaQuartaRegiao;
+            linha = "Segunda Linha";
+            maiorFertilidade = mediaSegundaLinha;
 
         }
 
-        mediaQuintaRegiao /= 5;
+        mediaTerceiraLinha /= 6;
 
-        if (maiorFoco < mediaQuintaRegiao) {
+        if (maiorFertilidade < mediaTerceiraLinha) {
 
-            regiao = "Quinta Região";
-            maiorFoco = mediaQuintaRegiao;
+            linha = "Terceira Linha";
+            maiorFertilidade = mediaTerceiraLinha;
 
         }
 
-        System.out.println("O maior foco de pragas foi registrado na " + regiao + ", onde chegou à uma média de " + maiorFoco + "%.");
+        mediaQuartaLinha /= 6;
+
+        if (maiorFertilidade < mediaQuartaLinha) {
+
+            linha = "Quarta Linha";
+            maiorFertilidade = mediaQuartaLinha;
+
+        }
+
+        mediaQuintaLinha /= 6;
+
+        if (maiorFertilidade < mediaQuintaLinha) {
+
+            linha = "Quinta Linha";
+            maiorFertilidade = mediaQuintaLinha;
+
+        }
+
+        mediaSextaLinha /= 6;
+
+        if (maiorFertilidade < mediaSextaLinha) {
+
+            linha = "Sexta Linha";
+            maiorFertilidade = mediaSextaLinha;
+
+        }
+
+        System.out.println("A maior fertilidade foi registrada na " + linha + ", onde chegou à uma média de " + maiorFertilidade + "%.");
 
     }
 }
