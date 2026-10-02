@@ -12,63 +12,45 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        double[] plantacao = new double[12];
+        double[] hortalicas = new double[5];
 
-        System.out.println("Indique o consumo de água, em Litros, do primeiro setor: ");
-        plantacao[0] = entrada.nextDouble();
+        System.out.println("Indique a produção de hortaliças do primeiro talhão: ");
+        hortalicas[0] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do segundo setor: ");
-        plantacao[1] = entrada.nextDouble();
+        System.out.println("Indique a produção de hortaliças do segundo talhão: ");
+        hortalicas[1] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do terceiro setor: ");
-        plantacao[2] = entrada.nextDouble();
+        System.out.println("Indique a produção de hortaliças do terceiro talhão: ");
+        hortalicas[2] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do quarto setor: ");
-        plantacao[3] = entrada.nextDouble();
+        System.out.println("Indique a produção de hortaliças do quarto talhão: ");
+        hortalicas[3] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do quinto setor: ");
-        plantacao[4] = entrada.nextDouble();
+        System.out.println("Indique a produção de hortaliças do quinto talhão: ");
+        hortalicas[4] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do sexto setor: ");
-        plantacao[5] = entrada.nextDouble();
+        double primeiroTalhao = hortalicas[0];
+        double segundoTalhao = hortalicas[1];
+        double terceiroTalhao = hortalicas[2];
+        double quartoTalhao = hortalicas[3];
+        double quintoTalhao = hortalicas[4];
+        double total = 0;
 
-        System.out.println("Indique o consumo de àgua, em Litros, do sétimo setor: ");
-        plantacao[6] = entrada.nextDouble();
 
-        System.out.println("Indique o consumo de àgua, em Litros, do oitavo setor: ");
-        plantacao[7] = entrada.nextDouble();
+        for ( double producao : hortalicas ) {
 
-        System.out.println("Indique o consumo de àgua, em Litros, do nono setor: ");
-        plantacao[8] = entrada.nextDouble();
+            total += producao;
 
-        System.out.println("Indique o consumo de àgua, em Litros, do décimo setor: ");
-        plantacao[9] = entrada.nextDouble();
+        }
 
-        System.out.println("Indique o consumo de àgua, em Litros, do penultimo setor: ");
-        plantacao[10] = entrada.nextDouble();
+        System.out.println("========= RELATÓRIO GERAL ========");
+        System.out.println("Primeiro Talhão: " + primeiroTalhao);
+        System.out.println("Segundo Talhão: " + segundoTalhao  );
+        System.out.println("Terceiro Talhão: " + terceiroTalhao);
+        System.out.println("Quarto Talhão: " + quartoTalhao    );
+        System.out.println("Quinto Talhão: " + quintoTalhao    );
+        System.out.println("Total: " + total                   );
+        System.out.println("==================================");
 
-        System.out.println("Indique o consumo de àgua, em Litros, do último setor:");
-        plantacao[11] = entrada.nextDouble();
-
-        double maiorConsumo = 0;
-        int maiorSetor = 0;
-
-            for (int i = 0; i < plantacao.length; i++) {
-
-                if (maiorConsumo == 0) {
-
-                    maiorConsumo = plantacao[i];
-                    maiorSetor = i;
-
-                } else if (maiorConsumo < plantacao[i]) {
-
-                    maiorConsumo = plantacao[i];
-                    maiorSetor = i;
-
-                }
-
-            }
-
-        System.out.println("O setor número " + (maiorSetor + 1) + " foi destacado com o maior consumo dentre todos, registrando um gasto de " + maiorConsumo + " litros de água." );
     }
 }
