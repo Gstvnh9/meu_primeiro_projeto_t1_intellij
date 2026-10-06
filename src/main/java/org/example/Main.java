@@ -12,19 +12,56 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int[] valores = new int[5];
-        int soma = 0;
+        int[][] producao = {
 
-        for(int i = 0; i < valores.length; i++) {
+                {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
+                {13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24},
+                {25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36},
+                {37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48}
 
-            System.out.println("Indique o valor na posição [" + i + "]:");
-            valores[i] = entrada.nextInt();
-            soma += valores[i];
+        };
+
+        int primeiroPomar = 0;
+        int segundoPomar = 0;
+        int terceiroPomar = 0;
+        int quartoPomar = 0;
+        int maiorProducaoAnual = 0;
+        String maiorPomar = "";
+
+            for (int i = 0; i < 12; i++) {
+
+                primeiroPomar += producao[0][i];
+                segundoPomar += producao[1][i];
+                terceiroPomar += producao[2][i];
+                quartoPomar += producao[3][i];
 
         }
 
-        System.out.println("A soma dos valores é igual a: " + soma + ".");
+        maiorProducaoAnual = primeiroPomar;
+        maiorPomar = "Primeiro Pomar";
+
+        if (maiorProducaoAnual < segundoPomar) {
+
+            maiorPomar = "Segundo Pomar";
+            maiorProducaoAnual = segundoPomar;
+
+        }
+
+        if (maiorProducaoAnual < terceiroPomar) {
+
+            maiorPomar = "Terceiro Pomar";
+            maiorProducaoAnual = terceiroPomar;
+
+        }
+
+        if (maiorProducaoAnual < quartoPomar) {
+
+            maiorPomar = "Quarto Pomar";
+            maiorProducaoAnual = quartoPomar;
+
+        }
+
+        System.out.println("O " + maiorPomar + " foi registrado com a maior produção anual, com " + maiorProducaoAnual + " frutas produzidas ao todo.");
 
     }
 }
-
