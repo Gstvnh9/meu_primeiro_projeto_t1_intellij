@@ -12,25 +12,23 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        //Dado o vetor {12, 45, 8, 90, 23}, percorra todas as posições
-        //e determine qual é o maior valor armazenado
+        int[] vetor = {4, 7, 8, 11, 16, 20};
+        int numerosPares = 0;
 
-        int[] vetor = {12, 45, 8, 90, 23};
-        int valor_maior = vetor[0];
+        for(int i = 0; i < vetor.length; i++){
 
-        for (int n = 0; n < vetor.length; n++) {
+            System.out.println(vetor[i]);
 
-            System.out.println(vetor[n]);
+            if (vetor[i] % 2 == 0) {
 
-            if (vetor[n] > valor_maior) {
-
-                valor_maior = vetor[n];
+                numerosPares++;
 
             }
 
         }
 
-        System.out.println(valor_maior);
+        System.out.println(" ");
+        System.out.println("Dentre os números apresentados, " + numerosPares + " deles são pares!");
 
     }
 }
