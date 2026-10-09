@@ -20,7 +20,7 @@ public class Main {
 
     public static void somar(int a, int b) {
 
-        System.out.println("A soma dos parâmetros é: " + (a + b) + ".");
+        System.out.println("Soma dos parâmetros: " + (a + b) + ".");
 
     }
 
