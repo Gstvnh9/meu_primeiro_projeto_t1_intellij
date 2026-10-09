@@ -13,13 +13,14 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        imprimirSaudacao();
+        System.out.println("Insira o valor de cada parâmetro, A e B, consecutivamente:");
+        somar(entrada.nextInt(), entrada.nextInt());
 
     }
 
-    public static void imprimirSaudacao() {
+    public static void somar(int a, int b) {
 
-        System.out.println("Bem-vindo ao sistema!");
+        System.out.println("A soma dos parâmetros é: " + (a + b) + ".");
 
     }
 
