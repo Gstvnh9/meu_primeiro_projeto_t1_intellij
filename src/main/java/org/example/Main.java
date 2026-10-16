@@ -13,30 +13,34 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        verificarPar();
+        maiorNumero();
 
     }
 
-    static void verificarPar() {
+    static void maiorNumero(){
 
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        System.out.println("Insira um número, inteiro, para verificação:");
-        int numero = entrada.nextInt();
+        int[] numeros = new int[3];
+        int maiorNumero = 0;
 
-        if (numero % 2 == 0) {
+        for (int i = 0; i < numeros.length; i++) {
 
-            System.out.println("O número " + numero + " é par!");
+            System.out.println("Indique o " + (i + 1) + "° número à ser comparado:");
+            numeros[i] = entrada.nextInt();
 
-        } else {
+            if (maiorNumero < numeros[i]) {
 
-            System.out.println("O número " + numero + " é impar!");
+                maiorNumero = numeros[i];
+
+            }
 
         }
 
-    }
+        System.out.println("Dentre os valores apresentados, o maior número é o " + maiorNumero + ".");
 
+    }
 }
 
