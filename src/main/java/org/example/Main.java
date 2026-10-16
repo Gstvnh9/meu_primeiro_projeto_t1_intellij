@@ -13,16 +13,34 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        System.out.println("Insira o valor, em graus Celsius, que você deseja converter para Fahrenheit: ");
-        double fahrenheit = converterCelsiusParaFahrenheit(entrada.nextDouble());
-
-        System.out.println("Este valor equivale à " + fahrenheit + " graus em Fahrenheit.");
+        calcularMedia();
 
     }
 
-    public static double converterCelsiusParaFahrenheit(double celsius) {
+    public static void calcularMedia() {
 
-        return celsius * 1.8 + 32;
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+
+        double[] notas = new double[3];
+        int quantidadeDeNotas = 0;
+        double somaDasNotas = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+
+            System.out.println("Insira o valor da nota " + (i + 1) + ":");
+            notas[i] = entrada.nextDouble();
+
+            somaDasNotas += notas[i];
+
+            quantidadeDeNotas++;
+
+        }
+
+        double media = somaDasNotas / quantidadeDeNotas;
+
+        System.out.println("A média do aluno foi de: " + media + ".");
 
     }
 
