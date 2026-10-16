@@ -13,16 +13,16 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        System.out.println("Insira o número que você deseja dobrar:");
-        int dobro = dobrar(entrada.nextInt());
+        System.out.println("Insira o valor, em graus Celsius, que você deseja converter para Fahrenheit: ");
+        double fahrenheit = converterCelsiusParaFahrenheit(entrada.nextDouble());
 
-        System.out.println("O dobro do número escolhido é: " + dobro);
+        System.out.println("Este valor equivale à " + fahrenheit + " graus em Fahrenheit.");
 
     }
 
-    public static int dobrar(int numero) {
+    public static double converterCelsiusParaFahrenheit(double celsius) {
 
-        return numero * 2;
+        return celsius * 1.8 + 32;
 
     }
 
