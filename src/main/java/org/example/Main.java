@@ -13,34 +13,28 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        calcularMedia();
+        verificarPar();
 
     }
 
-    public static void calcularMedia() {
+    static void verificarPar() {
 
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        double[] notas = new double[3];
-        int quantidadeDeNotas = 0;
-        double somaDasNotas = 0;
+        System.out.println("Insira um número, inteiro, para verificação:");
+        int numero = entrada.nextInt();
 
-        for (int i = 0; i < notas.length; i++) {
+        if (numero % 2 == 0) {
 
-            System.out.println("Insira o valor da nota " + (i + 1) + ":");
-            notas[i] = entrada.nextDouble();
+            System.out.println("O número " + numero + " é par!");
 
-            somaDasNotas += notas[i];
+        } else {
 
-            quantidadeDeNotas++;
+            System.out.println("O número " + numero + " é impar!");
 
         }
-
-        double media = somaDasNotas / quantidadeDeNotas;
-
-        System.out.println("A média do aluno foi de: " + media + ".");
 
     }
 
