@@ -13,14 +13,16 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        System.out.println("Insira o valor de cada parâmetro, A e B, consecutivamente:");
-        somar(entrada.nextInt(), entrada.nextInt());
+        System.out.println("Insira o número que você deseja dobrar:");
+        int dobro = dobrar(entrada.nextInt());
+
+        System.out.println("O dobro do número escolhido é: " + dobro);
 
     }
 
-    public static void somar(int a, int b) {
+    public static int dobrar(int numero) {
 
-        System.out.println("Soma dos parâmetros: " + (a + b) + ".");
+        return numero * 2;
 
     }
 
