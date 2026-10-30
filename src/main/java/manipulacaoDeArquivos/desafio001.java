@@ -1,0 +1,38 @@
+package manipulacaoDeArquivos;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class desafio001 {
+
+    static void main() {
+
+        String arquivo = "C://Users//53188493851//Downloads//ativos.csv";
+
+        try {
+
+            BufferedReader leitor = new BufferedReader(new FileReader(arquivo));
+
+            String linha;
+
+            while ((linha = leitor.readLine()) != null) {
+
+                String[] dados = linha.split(",");
+
+                String host = dados [0];
+
+                System.out.println("Host: " + host);
+                System.out.println("=============");
+
+            }
+
+        } catch (IOException e) {
+
+            System.out.println("O windows não permitiu a leitura!");
+
+        }
+
+    }
+
+}

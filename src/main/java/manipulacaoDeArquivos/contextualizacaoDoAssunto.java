@@ -3,6 +3,7 @@ package manipulacaoDeArquivos;
 import java.io.*;
 import java.io.IOException;
 import java.io.FileReader;
+import java.io.BufferedReader;
 
 public class contextualizacaoDoAssunto {
 
@@ -78,6 +79,43 @@ public class contextualizacaoDoAssunto {
             System.out.println("Arquivo não encontrado");
 
         }
+
+        System.out.println("" + "\n");
+        testePratico();
+
+    }
+
+    static void testePratico(){
+
+        String arquivo = "C://Users//53188493851//Downloads//ativos.csv";
+
+        try {
+
+            BufferedReader leitor = new BufferedReader(new FileReader(arquivo));
+
+            String linha;
+
+            while ((linha = leitor.readLine()) != null) {
+
+                String[] dados = linha.split(",");
+
+                String host = dados[0];
+                String ip = dados[1];
+                String sistema = dados[2];
+
+                System.out.println("Host: " + host);
+                System.out.println("IP: " + ip);
+                System.out.println("Sistema: " + sistema);
+                System.out.println("===================");
+
+            }
+
+        } catch (IOException e){
+
+            System.out.println("O windows não permitiu a leitura :(");
+
+        }
+
     }
 
 }
