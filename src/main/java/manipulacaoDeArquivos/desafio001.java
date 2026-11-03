@@ -29,7 +29,7 @@ public class desafio001 {
 
         } catch (IOException e) {
 
-            System.out.println("O windows não permitiu a leitura!");
+            System.out.println("O Windows não permitiu a leitura ou o Usuário não possui o arquivo!");
 
         }
 
