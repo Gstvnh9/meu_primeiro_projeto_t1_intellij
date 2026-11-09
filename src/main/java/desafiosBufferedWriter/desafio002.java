@@ -2,7 +2,8 @@ package desafiosBufferedWriter;
 
 import java.io.*;
 
-public class desafio002 {
+public class
+desafio002 {
 
     static void main() {
 
